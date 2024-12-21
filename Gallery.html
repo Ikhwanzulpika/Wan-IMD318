@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery - My Portfolio</title>
+    <style>
+        body {
+            font-family: Roboto, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f8f8;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: center;
+            background-color: #1B1B1B;
+            padding: 10px 0;
+        }
+
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 16px;
+        }
+
+        .navbar a:hover {
+            text-decoration: underline;
+        }
+
+        .animated-title {
+            text-align: center;
+            font-size: 32px;
+            font-weight: bold;
+            margin-top: 20px;
+            color: #1B1B1B;
+            animation: moveTitle 5s ease-in-out infinite;
+        }
+
+        @keyframes moveTitle {
+            0% {
+                transform: translateX(-100%);
+            }
+            50% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translateX(100%);
+            }
+        }
+
+        .memory-text {
+            text-align: center;
+            font-size: 18px;
+            color: #555;
+            margin-top: 10px;
+            padding: 10px;
+            font-style: italic;
+            font-weight: bold;
+            text-transform: capitalize;
+        }
+
+        .gallery-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); 
+            gap: 20px;
+            max-width: 1000px;
+            margin: 20px auto;
+            padding: 10px;
+            border-radius: 10px;
+            border: 2px solid #ddd;
+            background-color: white;
+        }
+
+        .gallery-item {
+            overflow: hidden;
+            position: relative;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 10px;
+            transition: transform 0.3s ease, opacity 0.3s ease;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.1);
+            opacity: 0.8;
+        }
+
+        .gallery-item {
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 0.6s forwards;
+        }
+
+        .gallery-item:nth-child(odd) {
+            animation-delay: 0.2s;
+        }
+
+        .gallery-item:nth-child(even) {
+            animation-delay: 0.4s;
+        }
+
+        @keyframes fadeInUp {
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .footer {
+            text-align: center;
+            background-color: #1B1B1B;
+            color: white;
+            padding: 10px 0;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+
+
+    <div class="navbar">      
+	<a href="index.html">Home</a>
+        <a href="biodata.html">Biodata</a>
+        <a href="Family.html">Family</a>
+        <a href="Education.html">Education</a>
+        <a href="Experience.html">Experience</a>
+        <a href="Gallery.html">Gallery</a>
+        <a href="Games.html">Games</a>
+    </div>
+
+    <div class="animated-title">GALLERY</div>
+
+
+    <div class="memory-text">
+        "Memories are the treasures we keep, tucked away in our hearts forever. Each photo is a chapter, capturing the laughter, love, and moments that shape our journey."
+    </div>
+
+    <div class="gallery-container">
+        <div class="gallery-item"><img src="gal1.jfif" alt="Image 1"></div>
+        <div class="gallery-item"><img src="gel2.jfif" alt="Image 2"></div>
+        <div class="gallery-item"><img src="gel3.jfif" alt="Image 3"></div>
+        <div class="gallery-item"><img src="gel4.jfif" alt="Image 4"></div>
+        <div class="gallery-item"><img src="gel5.jfif" alt="Image 5"></div>
+        <div class="gallery-item"><img src="gel7.jfif" alt="Image 7"></div>
+        <div class="gallery-item"><img src="gel8.jfif" alt="Image 8"></div>
+        <div class="gallery-item"><img src="gel9.jfif" alt="Image 9"></div>
+        <div class="gallery-item"><img src="gel10.jfif" alt="Image 10"></div>
+        <div class="gallery-item"><img src="gel11.jfif" alt="Image 11"></div>
+        <div class="gallery-item"><img src="gel12.jfif" alt="Image 12"></div>
+        <div class="gallery-item"><img src="gel13.jfif" alt="Image 13"></div>
+    </div>
+
+ 
+    <div class="footer">
+        <p>This Website is developed for IMD318 Individual Assignment</p>
+    </div>
+
+</body>
+</html>

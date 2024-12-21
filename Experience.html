@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Experience - My Portfolio</title>
+    <style>
+        body {
+            font-family: Roboto, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f8f8;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: center;
+            background-color: #1B1B1B;
+            padding: 10px 0;
+        }
+
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 16px;
+        }
+
+        .navbar a:hover {
+            text-decoration: underline;
+        }
+
+        .content {
+            max-width: 1000px;
+            margin: 30px auto;
+            background-color: white;
+            padding: 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 1.5);
+            text-align: center;
+        }
+
+        .content h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 30px;
+        }
+
+        table, th, td {
+            border: 1px solid #ddd;
+            text-align: center;
+        }
+
+        th, td {
+            padding: 15px;
+        }
+
+        th {
+            background-color: #1B1B1B;
+            color: white;
+        }
+
+        td {
+            background-color: #f8f8f8;
+        }
+
+        .btn-open {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        .btn-open:hover {
+            background-color: #45a049;
+        }
+
+        .footer {
+            text-align: center;
+            background-color: #1B1B1B;
+            color: white;
+            padding: 10px 0;
+            margin-top: 30px;
+        }
+
+ 
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.7);
+        }
+
+        .modal-content {
+            margin: 10% auto;
+            display: block;
+            max-width: 80%;
+        }
+
+        .modal-close {
+            position: absolute;
+            top: 15px;
+            right: 35px;
+            color: #aaa;
+            font-size: 40px;
+            font-weight: bold;
+        }
+
+        .modal-close:hover,
+        .modal-close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+     
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+ 
+    <div class="navbar">
+	<a href="index.html">Home</a>
+        <a href="biodata.html">Biodata</a>
+        <a href="Family.html">Family</a>
+        <a href="Education.html">Education</a>
+        <a href="Experience.html">Experience</a>
+        <a href="Gallery.html">Gallery</a>
+        <a href="Games.html">Games</a>	
+    </div>
+
+ 
+    <div class="content">
+        <h2>My Work Experience</h2>
+        <p>Below are the different jobs I have had throughout my career.</p>
+
+      
+        <table>
+            <thead>
+                <tr>
+                    <th>Job Title</th>
+                    <th>Company</th>
+                    <th>Duration</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Pool Lifeguard</td>
+                    <td>Rania Sofia Resort</td>
+                    <td>June 2018 - August 2018</td>
+                    <td><button class="btn-open" onclick="openModal('kolam')">Open</button></td>
+                </tr>
+                <tr>
+                    <td>Crew JOM HEBOH</td>
+                    <td>JOM HEBOH Event</td>
+                    <td>March 2019</td>
+                    <td><button class="btn-open" onclick="openModal('jomheboh')">Open</button></td>
+                </tr>
+                <tr>
+                    <td>Street Food Stall</td>
+                    <td>Street Vendor</td>
+                    <td>July 2020 - September 2020</td>
+                    <td><button class="btn-open" onclick="openModal('gerai')">Open</button></td>
+                </tr>
+                <tr>
+                    <td>Catering</td>
+                    <td>Event Catering</td>
+                    <td>May 2021 - Present</td>
+                    <td><button class="btn-open" onclick="openModal('catering')">Open</button></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+   
+    <div id="kolamModal" class="modal">
+        <span class="modal-close" onclick="closeModal('kolam')">&times;</span>
+        <img class="modal-content" id="kolamImg" src="kolam.jfif" alt="Pool Lifeguard">
+    </div>
+
+    <div id="jomhebohModal" class="modal">
+        <span class="modal-close" onclick="closeModal('jomheboh')">&times;</span>
+        <img class="modal-content" id="jomhebohImg" src="jom heboh.jpg" alt="Crew JOM HEBOH">
+    </div>
+
+    <div id="geraiModal" class="modal">
+        <span class="modal-close" onclick="closeModal('gerai')">&times;</span>
+        <img class="modal-content" id="geraiImg" src="gerai.jpg" alt="Street Food Stall">
+    </div>
+
+    <div id="cateringModal" class="modal">
+        <span class="modal-close" onclick="closeModal('catering')">&times;</span>
+        <img class="modal-content" id="cateringImg" src="catering.jfif" alt="Catering">
+    </div>
+
+   
+    <div class="footer">
+        <p>This Website is developed for IMD318 Individual Assignment</p>
+    </div>
+
+    <script>
+       
+        function openModal(experience) {
+            document.getElementById(experience + "Modal").style.display = "block";
+        }
+
+        
+        function closeModal(experience) {
+            document.getElementById(experience + "Modal").style.display = "none";
+        }
+    </script>
+
+</body>
+</html>
